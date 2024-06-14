@@ -17,7 +17,7 @@ Cada usuario en la tabla tiene un botón "Eliminar". Al hacer clic en este botó
 <h2>Funcionalidad Adicional:</h2>
 <h3>Edición de Usuario:</h3>
 
-Además de eliminar usuarios, la aplicación permite la edición directa de los campos de nombre, apellido y correo electrónico de cada usuario en la tabla. Al hacer clic en el botón "Editar", los campos correspondientes se convierten en campos de texto editables. Después de realizar los cambios deseados, el usuario puede guardar los cambios, lo cual actualiza los datos del usuario utilizando una petición PUT a la API. Esto permite una gestión completa y flexible de los datos de usuario sin salir de la página principal.
+Además de eliminar usuarios, la aplicación permite la edición directa de los campos de nombre, apellido y correo electrónico de cada usuario en la tabla. Al hacer clic en el botón "Editar", los campos correspondientes se convierten en campos de texto editables. Después de realizar los cambios deseados, el usuario puede guardar los cambios, lo cual actualiza los datos del usuario utilizando una petición PUT a la API. Esto permite una gestión completa y flexible de los datos de usuario sin salir de la página principal. Finalmente, también se hicieron validaciones para los diferentes campos.
 
 <h3>Responsividad 100%:</h3>
 
