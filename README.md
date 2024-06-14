@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+El sistema desarrollado es una aplicación web construida con React que interactúa directamente con una API REST para gestionar usuarios. La funcionalidad principal incluye la visualización de usuarios activos desde la API, la capacidad de añadir nuevos usuarios mediante un formulario, la eliminación de usuarios existentes con confirmación del usuario, y la edición de los datos de nombre, apellido y correo electrónico de cada usuario.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2> Funcionalidad Principal: </h2>
 
-## Available Scripts
+<h3>Visualización de Usuarios:</h3>
 
-In the project directory, you can run:
+Al cargar la página, se realiza una solicitud GET a la API para obtener todos los usuarios activos. Estos usuarios se muestran en una tabla, que incluye su nombre, apellido y correo electrónico.
 
-### `npm start`
+<h3> Añadir Usuario: </h3>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Se proporciona un formulario donde el usuario puede ingresar el nombre, apellido y correo electrónico de un nuevo usuario. Al enviar el formulario, se realiza una petición POST a la API para añadir este usuario a la base de datos. Una vez añadido, el nuevo usuario aparece inmediatamente en la lista de usuarios activos sin necesidad de recargar la página.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h3>Eliminar Usuario:</h3>
 
-### `npm test`
+Cada usuario en la tabla tiene un botón "Eliminar". Al hacer clic en este botón, se muestra una confirmación al usuario para asegurar que desea eliminar el usuario seleccionado. Si se confirma, se realiza una petición DELETE a la API para eliminar permanentemente el usuario de la base de datos. El usuario desaparece de la lista de usuarios activos después de la confirmación.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h2>Funcionalidad Adicional:</h2>
+<h3>Edición de Usuario:</h3>
 
-### `npm run build`
+Además de eliminar usuarios, la aplicación permite la edición directa de los campos de nombre, apellido y correo electrónico de cada usuario en la tabla. Al hacer clic en el botón "Editar", los campos correspondientes se convierten en campos de texto editables. Después de realizar los cambios deseados, el usuario puede guardar los cambios, lo cual actualiza los datos del usuario utilizando una petición PUT a la API. Esto permite una gestión completa y flexible de los datos de usuario sin salir de la página principal.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h3>Responsividad 100%:</h3>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+El diseño de la aplicación se ha implementado utilizando componentes de Material-UI y CSS personalizado para garantizar que la interfaz sea completamente responsiva. Esto significa que la aplicación se adapta y se ve bien en diferentes dispositivos y tamaños de pantalla, desde computadoras de escritorio hasta dispositivos móviles. Los elementos como tablas y formularios se ajustan dinámicamente para ofrecer una experiencia de usuario consistente y optimizada, independientemente del dispositivo utilizado.
